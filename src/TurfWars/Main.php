@@ -34,6 +34,8 @@ use pocketmine\entity\Entity;
 
 
 
+use pocketmine\scheduler\Task;
+use pocketmine\scheduler\TaskScheduler;
 
 
 use pocketmine\nbt\tag\IntTag;
@@ -41,6 +43,9 @@ use pocketmine\nbt\tag\CompoundTag;
 
 
 use pocketmine\math\Vector3;
+
+use pocketmine\Player;
+use pocketmine\Server;
 
 class Main extends PluginBase implements Listener{
 
@@ -57,7 +62,7 @@ public $games = ["Game1" => ["Arena" => "TW-1", "Status" => "JOINABLE", "RedScor
 
 public function onEnable(){
 $this->getServer()->getPluginManager()->registerEvents($this, $this);
-$this->getServer()->getScheduler()->scheduleRepeatingTask(new Task($this), 20);
+$this->getScheduler()->scheduleRepeatingTask(new Task($this), 20);
  
 
 
