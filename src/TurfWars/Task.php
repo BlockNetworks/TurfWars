@@ -17,7 +17,7 @@ class Task extends Task {
 
 	}
 
-	public function onRun($currentTick) {
+	public function onRun(int $currentTick) {
 		$this->plugin->Second();
 	}
 
