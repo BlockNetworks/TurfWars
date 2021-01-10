@@ -12,7 +12,7 @@ use pocketmine\utils\TextFormat;
 class Task extends Task {
 
 	public function __construct(Main $plugin){
-		parent::__construct($plugin);
+		// parent::__construct($plugin);
 		$this->plugin = $plugin;
 
 	}
